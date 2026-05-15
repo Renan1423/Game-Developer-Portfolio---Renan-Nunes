@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renan Nunes | Game Programmer & Game Designer</title>
+
+    <link rel="icon" type="image/png" href="images/PampamIcon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <button class="nav-btn" onclick="moveCarousel(0)">
+            <i class="fa-solid fa-house"></i><span class="tooltip">Start Page</span>
+        </button>
+        <button class="nav-btn" onclick="moveCarousel(1)">
+            <i class="fa-brands fa-unity"></i><span class="tooltip">Unity</span>
+        </button>
+        <button class="nav-btn" onclick="moveCarousel(2)">
+            <img src="images/UnrealEngineIcon.png" alt="Unreal Engine" class="nav-custom-icon">
+            <span class="tooltip">Unreal Engine</span>
+        </button>
+        <button class="nav-btn" onclick="moveCarousel(3)">
+            <i class="fa-solid fa-code"></i><span class="tooltip">Other Tech</span>
+        </button>
+        <button class="nav-btn" onclick="moveCarousel(4)">
+            <i class="fa-solid fa-palette"></i><span class="tooltip">Pixel Art</span>
+        </button>
+        <button class="nav-btn" onclick="moveCarousel(5)">
+            <i class="fa-solid fa-trophy"></i><span class="tooltip">Game Jams</span>
+        </button>
+        <button class="nav-btn" onclick="moveCarousel(6)">
+            <i class="fa-solid fa-microphone"></i><span class="tooltip">Lectures & Media</span>
+        </button>
+        <button class="nav-btn" onclick="moveCarousel(7)">
+            <i class="fa-solid fa-user"></i><span class="tooltip">About</span>
+        </button>
+        <button class="nav-btn" onclick="moveCarousel(8)">
+            <i class="fa-solid fa-file-alt"></i><span class="tooltip">Resume</span>
+        </button>
+    </nav>
+
+    <main class="carousel" id="mainCarousel">
+
+        <section class="section">
+            <div class="hero" style="margin-right: -400px; margin-left: -400px;">
+                <img src="images/PampamLogo.png" alt="Renan Nunes Logo" class="hero-logo">
+
+                <h1>Game Programmer, Game Designer and Pixel Artist</h1>
+                <h2>Renan Nunes</h2>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/renan-nunes-37119222a/" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://rerezin-das-galaxias.itch.io" title="Personal Itch.io"><i class="fa-brands fa-itch-io"></i></a>
+                    <a href="https://tinylanterngames.itch.io" title="Tiny Lantern Itch.io"><i class="fa-brands fa-itch-io"></i></a>
+                    <a href="https://store.steampowered.com/curator/45325408-Tiny-Lantern-Games/" title="Tiny Lantern Steam"><i class="fa-brands fa-steam"></i></a>  
+                    <a href="https://github.com/Renan1423" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="text-blue">Unity Projects</h2>
+            
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/Unity/Game1/Thumbnail.jpg" alt="Game Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Scorchie Adventures</h3>
+                        <p class="role">Tiny Lantern Games - Game Programmer, Game Designer & 2D Artist</p>
+                        <p class="date">January 2025 - April 2026</p>
+                        <ul>
+                            <li>Unity (C#)</li>
+                            <li>Code architectures, platformer physics, distributed systems and design patterns.</li>
+                            <li>Approved by Sampa Games' funding</li>
+                            <li>Nominee as "Best Student Game" in EAÍ Awards 2026</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Genre:</strong> Action / Adventure | <strong>Platforms:</strong> PC (Steam)</p>
+                    
+                    <p><em>"A classic tight platformer for casual and hardcore players alike! Help Scorchie, a hyperactive will-o'-wisp, to save his friends against a mysterious and perverse sludge while venturing into a vast world! Brave challenges, uncover secrets, and piece together the mystery of the purple sludge!"</em></p>
+                    
+                    <p>Initially developed in the first half of 2023 for a college Integrative Project (PI), Scorchie Adventures was continued and polished starting in early 2025 as a bachelor's thesis (TCC) in Digital Games and released in May 2026 on Steam as a commercial game.</p>
+                    
+                    <p><strong>In this project, I was responsible for:</strong></p>
+                    <ul>
+                        <li>Leading the programming team, planning the code architecture of the main systems;</li>
+                        <li>Programming platformer game physics in a system that uses Rigidbody 2D as a base, enhancing it through code to implement more complex features such as variable jump heights, dash, momentum, coyote time, and jump buffering;</li>
+                        <li>Programming the UI systems;</li>
+                        <li>Programming the save system;</li>
+                        <li>Programming and implementing the cutscenes;</li>
+                        <li>UI and UX;</li>
+                        <li>Level design;</li>
+                        <li>Narrative, direction, and creation of cutscenes;</li>
+                        <li>Creation of 2D pixel art and animations using Aseprite;</li>
+                        <li>Implementation of game assets, such as art, sound, and music.</li>
+                    </ul>
+
+                    <p><strong>This project involved:</strong></p>
+                    <ul>
+                        <li>Constant use of Unity and C#;</li>
+                        <li>Use of Plastic SCM as a version control tool;</li>
+                        <li>Utilization of Object-Oriented Programming (OOP), Distributed Systems, Design Patterns, Code Architecture, and Programming Logic;</li>
+                        <li>Game Design and Level Design;</li>
+                        <li>Utilization of assets such as More Mountains' Feel, All In One Sprite Shader, and I2 Localization;</li>
+                        <li>Pixel art and animations with Aseprite and Adobe After Effects;</li>
+                        <li>Constant communication within the team;</li>
+                        <li>Project planning using sprints and milestones;</li>
+                        <li>Shaders, lighting, particles, and special effects;</li>
+                        <li>System optimization and game performance.</li>
+                    </ul>
+
+                    <div class="media-grid">
+                        <img src="images/Unity/Game1/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/Unity/Game1/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/Unity/Game1/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/Unity/Game1/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/_QBj2WZ2IEQ" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/Unity/Game2/Thumbnail.jpg" alt="Festa de Delícias Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Festa de Delícias</h3>
+                        <p class="role">Mind Growth Games - Unity Game Developer</p>
+                        <p class="date">March 2025 - August 2026</p>
+                        <ul>
+                            <li>Casual mobile cooking game.</li>
+                            <li>Architected main game systems and mobile UI responsiveness.</li>
+                            <li>Integrated Google Play Games systems and assets like More Mountains' Feel, I2 Localization, and Dialogue System.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Genre:</strong> Casual / Cooking | <strong>Platforms:</strong> Mobile (Android / iOS)</p>
+                    
+                    <p><em>"A casual mobile cooking game featuring the cuisine of Maranhão."</em></p>
+                    
+                    <p><strong>In this project, I was responsible for:</strong></p>
+                    <ul>
+                        <li>Architecting the main game systems;</li>
+                        <li>Programming UI functionality and interactions;</li>
+                        <li>Ensuring UI responsiveness across a wide variety of mobile screen sizes;</li>
+                        <li>Integrating Google Play Games systems;</li>
+                        <li>Configuring and implementing assets such as More Mountains' Feel, I2 Localization, and Dialogue System for Unity;</li>
+                        <li>Implementing art, visual effects (VFX), animations, sounds, music, and UI.</li>
+                    </ul>
+
+                    <p><strong>This project involved:</strong></p>
+                    <ul>
+                        <li>Constant use of Unity and C#;</li>
+                        <li>Use of Plastic SCM as a version control tool;</li>
+                        <li>Utilization of Object-Oriented Programming (OOP), Distributed Systems, Design Patterns, Code Architecture, and Programming Logic;</li>
+                        <li>Game Design and Level Design;</li>
+                        <li>Utilization of assets such as More Mountains' Feel, I2 Localization, and Dialogue System for Unity;</li>
+                        <li>Utilization of Unity assets such as the Cinemachine, 2D URP, Post Processing and Unity Shader Graphs;</li>
+                    </ul>
+
+                    <div class="media-grid">
+                        <img src="images/Unity/Game2/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/Unity/Game2/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/Unity/Game2/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/Unity/Game2/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/watch?v=EJI0Pio18WY" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/Unity/Game3/Thumbnail.jpg" alt="Cleaning the World with Pampam Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Cleaning the World with Pampam</h3>
+                        <p class="role">Galaxy Forge Studios - Solo Indie Game Developer</p>
+                        <p class="date">November 2021 - January 2022</p>
+                        <ul>
+                            <li>Solo developed educational infinite runner;</li>
+                            <li>Architected, programmed, planned, designed and published the entire game by myself;</li>
+                            <li>Published commercially on Steam;</li>
+                            <li>Design Patterns, state machines, encrypted save system;</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Genre:</strong> Educational Infinite Runner | <strong>Platforms:</strong> PC (Steam)</p>
+                    
+                    <p><em>"Help Pampam eliminate the incorrectly disposed garbage to save nature in this cute and super different educative infinite runner game! Evade obstacles, fight bosses and use a variety of powers-ups to clean the world!"</em></p>
+                    
+                    <p>This project was developed as a solo indie game developer.</p>
+
+                    <p><strong>In this project, I was responsible for:</strong></p>
+                    <ul>
+                        <li>Architecting and programming the entire game;</li>
+                        <li>Programming UI functionality and interactions;</li>
+                        <li>Creation of the encrypted Save System;</li>
+                        <li>Creation of the Power Up, Skills, Enemies and Boss fights systems using design patterns such as state machines;</li>
+                        <li>Game Design, level design;</li>
+                        <li>Making the art direction, 2D arts and animations;</li>
+                        <li>Implementing sounds and music;</li>
+                        <li>Implementing art, visual effects (VFX), animations, sounds, music, and UI;</li>
+                        <li>Publishing the game on Steam.</li>
+                    </ul>
+
+                    <p><strong>This project involved:</strong></p>
+                    <ul>
+                        <li>Constant use of Unity and C#;</li>
+                        <li>Use of Plastic SCM as a version control tool;</li>
+                        <li>Utilization of Object-Oriented Programming (OOP), Distributed Systems, Design Patterns, Code Architecture, and Programming Logic;</li>
+                        <li>Implementation of a boss fight using state machines;</li>
+                        <li>Game Design and Level Design;</li>
+                        <li>2D art and animations with Pixel Art;</li>
+                        <li>2D Lights and Post Processing using Unity's URP;</li>
+                        <li>Unity's cinemachine;</li>
+                        <li>Unity's Shader Graphs;</li>
+                        <li>Game publishing on Steam.</li>
+                    </ul>
+
+                    <div class="media-grid">
+                        <img src="images/Unity/Game3/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/Unity/Game3/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/Unity/Game3/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/Unity/Game3/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/x4gW-lrk5Ho" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="text-purple">Unreal Engine 5 Projects</h2>
+            
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/UnrealEngine/Game1/Thumbnail.jpg" alt="Ruff Ghanor Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Ruff Ghanor</h3>
+                        <p class="role">DX Gameworks - Game Programming Intern</p>
+                        <p class="date">May 2023 - October 2023</p>
+                        <ul>
+                            <li>Unreal Engine 5 (C++ and Blueprints)</li>
+                            <li>GAS (Gameplay Ability System) and deckbuilding systems</li>
+                            <li>Unreal's Common UI plugin</li>
+                            <li>400+ positive reviews on Steam</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Genre:</strong> Deckbuilder Roguelite | <strong>Platforms:</strong> PC/Console</p>
+                    
+                    <p><em>"Ruff Ghanor is a Deckbuilder game with Roguelite elements, where every collected card represents a crucial action on your journey. Build the perfect deck, plan your strategies, and create powerful synergies as you progress to face your destiny."</em></p>
+                    
+                    <p>This project was developed in Unreal Engine 5, where I worked as a Game Programming Intern.</p>
+                    
+                    <p><strong>In this project, I was responsible for:</strong></p>
+                    <ul>
+                        <li>Implementation of effects with GAS (Gameplay Ability System)</li>
+                        <li>Programming effects for cards, relics, and miracles;</li>
+                        <li>Programming battle rewards;</li>
+                        <li>Programming status effects;</li>
+                        <li>Hell's Forge UI;</li>
+                        <li>Sound effects (SFX) and visual effects (VFX).</li>
+                    </ul>
+
+                    <p><strong>This project involved:</strong></p>
+                    <ul>
+                        <li>Constant use of Unreal Engine 5, C++, and Blueprints;</li>
+                        <li>Constant utilization of Object-Oriented Programming (OOP), Data Structures, Distributed Systems, Design Patterns, Programming Logic, and Code Architecture;</li>
+                        <li>Creation of features built upon systems developed by senior programmers;</li>
+                        <li>Creation of visual and sound effects;</li>
+                        <li>Constant communication with the programming, art, game design, and production teams;</li>
+                        <li>Use of TortoiseSVN for version control.</li>
+                    </ul>
+
+                    <div class="media-grid">
+                        <img src="images/UnrealEngine/Game1/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/UnrealEngine/Game1/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/UnrealEngine/Game1/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/UnrealEngine/Game1/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/w_647ZpU6ys" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/UnrealEngine/Game2/Thumbnail.jpg" alt="Amazon Quest Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Amazon Quest</h3>
+                        <p class="role">DX Gameworks - Game Programming Intern</p>
+                        <p class="date">August 2022 - May 2023</p>
+                        <ul>
+                            <li>Unreal Engine 5 (C++ and Blueprints)</li>
+                            <li>Save System, Common UI, and GAS.</li>
+                            <li>TortoiseSVN for version control.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Genre:</strong> Educational / Match 3 | <strong>Platforms:</strong> PC / Mobile</p>
+                    
+                    <p><em>"Amazon Quest is an educational game that allows the player to control a brave explorer. The goal is to map all the Amazon region, its villages, tribes, plants and animals by playing match 3 levels."</em></p>
+                    
+                    <p>This project was developed in Unreal Engine 5, where I worked as a Game Programming Intern.</p>
+                    
+                    <p><strong>In this project, I was responsible for:</strong></p>
+                    <ul>
+                        <li>Save System;</li>
+                        <li>Common UI setup and implementations;</li>
+                        <li>GAS (Gameplay Ability System) setup;</li>
+                        <li>Screen Stack;</li>
+                        <li>Fuel preview system;</li>
+                        <li>Health bar;</li>
+                        <li>UI animations;</li>
+                        <li>Buff/debuff effects;</li>
+                        <li>Bug fixings.</li>
+                    </ul>
+
+                    <p><strong>This project involved:</strong></p>
+                    <ul>
+                        <li>Constant use of Unreal Engine 5, C++ and Blueprints;</li>
+                        <li>Constant utilization of Object-Oriented Programming (OOP), Data Structures, Distributed Systems, Design Patterns, Programming Logic, and Code Architecture;</li>
+                        <li>Creation of features built upon systems developed by senior programmers;</li>
+                        <li>Implementation and usage of Unreal's popular plugins such as the Common UI and the GAS (Gameplay Ability System);</li>
+                        <li>Creation of visual and sound effects;</li>
+                        <li>Constant communication with the programming, art, game design, and production teams;</li>
+                        <li>Use of TortoiseSVN for version control.</li>
+                    </ul>
+
+                    <div class="media-grid">
+                        <img src="images/UnrealEngine/Game2/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/UnrealEngine/Game2/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/UnrealEngine/Game2/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/UnrealEngine/Game2/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/UnrealEngine/Game3/Thumbnail.jpg" alt="Game Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Happily Never After</h3>
+                        <p class="role">DX Gameworks - Game Programmer and Game Designer</p>
+                        <p class="date">January 2023 - June 2023</p>
+                        <ul>
+                            <li>Contributed to internal commercial projects using UE5 (C++ and Blueprints).</li>
+                            <li>Built core systems for the company's pipeline.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Genre:</strong> Various | <strong>Platforms:</strong> PC/Console</p>
+                    <p><strong>My Contributions:</strong> Built the Motion Matching system and a Vehicle Sound Synth using Metasounds. Gained experience with Common UI and GAS (Gameplay Ability System).</p>
+                    <div class="media-grid">
+                        <img src="images/UnrealEngine/Game3/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/UnrealEngine/Game3/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/UnrealEngine/Game3/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/UnrealEngine/Game3/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <section class="section">
+            <h2 class="text-orange">Other Languages & Frameworks</h2>
+            
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/OtherTechnologies/Game1/Thumbnail.jpg" alt="Bushiden Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Bushiden - MonoGame outsourcing project</h3>
+                        <p class="role">DX Gameworks - Game Programming Intern</p>
+                        <p class="date">July 2023 - August 2023</p>
+                        <ul>
+                            <li>MonoGame (C#)</li>
+                            <li>Enemies, gimmicks, and level implementation using Tiled.</li>
+                            <li>Tortoise SVN for version control.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Genre:</strong> Action Platformer | <strong>Framework:</strong> MonoGame</p>
+                    
+                    <p><em>"Your sister has vanished and rumors swirl that Gaoh has been resurrected with an evil army at his command. Explore for cybernetic upgrades until you are powerful enough to defeat the diabolic Gaoh and his cybergenetic army once and for all in this futuristic, action platformer!"</em></p>
+                    
+                    <p>This project was developed as an outsourcing project at DX Gameworks, made using MonoGame.</p>
+
+                    <p><strong>In this project, I was responsible for:</strong></p>
+                    <ul>
+                        <li>Enemies and gimmicks programming;</li>
+                        <li>Level and arts implementation alongside the game designers using the Tiled and MonoGame frameworks;</li>
+                        <li>Code improvements;</li>
+                        <li>Bug fixing.</li>
+                    </ul>
+
+                    <p><strong>This project involved:</strong></p>
+                    <ul>
+                        <li>Constant use of C# and the MonoGame framework;</li>
+                        <li>Use of Tortoise SVN as a version control tool;</li>
+                        <li>Utilization of Object-Oriented Programming (OOP), Distributed Systems, Design Patterns, Code Architecture, and Programming Logic;</li>
+                        <li>Communication with the game design team;</li>
+                        <li>Use of the Tiled framework for level design and testing.</li>
+                    </ul>
+
+                    <div class="media-grid">
+                        <img src="images/OtherTechnologies/Game1/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/OtherTechnologies/Game1/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/OtherTechnologies/Game1/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/OtherTechnologies/Game1/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/cWb8L6IqZBA" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/OtherTechnologies/Game2/Thumbnail.jpg" alt="Sonic Physics Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Sonic Physics</h3>
+                        <p class="role">Study Project</p>
+                        <p class="date">March 2021 - April 2021</p>
+                        <ul>
+                            <li>Game Maker Studio 2 (GML)</li>
+                            <li>Complex physics, slopes, and momentum mechanics.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Engine:</strong> Game Maker Studio 2 | <strong>Language:</strong> GML</p>
+                    
+                    <p>This project was developed as a study project in 2021 using the game engine Game Maker Studio 2.</p>
+
+                    <p><strong>In this project, I was able to practice:</strong></p>
+                    <ul>
+                        <li>The GML (Game Maker Language), a combination of C++ with Python;</li>
+                        <li>Sonic-like physics and mathematics for handling slopes, wall and ceiling movements;</li>
+                        <li>Movement with acceleration and deceleration;</li>
+                        <li>Flexible jumping;</li>
+                        <li>Animations and sprites implementation in GMS2;</li>
+                        <li>Collisions in GMS2;</li>
+                        <li>UI in GMS2;</li>
+                        <li>Spawning, deactivation and destroying objects in GMS2;</li>
+                        <li>Camera follow and visual effects in GMS2;</li>
+                        <li>Enemies, health and collectables in GMS2.</li>
+                    </ul>
+
+                    <div class="media-grid">
+                        <img src="images/OtherTechnologies/Game2/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/OtherTechnologies/Game2/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/OtherTechnologies/Game2/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/OtherTechnologies/Game2/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/OtherTechnologies/Game3/Thumbnail.jpg" alt="Java Game Engine Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Game Engine and Games using Java</h3>
+                        <p class="role">Study Project / Game Programmer</p>
+                        <p class="date">April 2020 - January 2021</p>
+                        <ul>
+                            <li>Custom Game Engine in Java with game loop and runtime rendering.</li>
+                            <li>Implemented A*, Frustum Culling, and procedural world generation.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Language:</strong> Java | <strong>Type:</strong> Custom Engine & Study Projects</p>
+                    
+                    <p><em>"A set of projects developed in Java using a simple game engine made by myself in 2020."</em></p>
+
+                    <p><strong>In these projects, using the Java language, I've made:</strong></p>
+                    <ul>
+                        <li>A functional game loop;</li>
+                        <li>A rendering system using JFrame and the game loop;</li>
+                        <li>Tile-based levels using textures by associating each pixel color to a different tile;</li>
+                        <li>Spawning and destruction of objects;</li>
+                        <li>Collisions for enemies, player and collectables;</li>
+                        <li>Platformer physics;</li>
+                        <li>Simple Bullet physics;</li>
+                        <li>Simple health, ammo and collectables system;</li>
+                        <li>Frustum culling, rendering only the objects that are inside the frame;</li>
+                        <li>Camera system that follows the player;</li>
+                        <li>Sprites animations using Spritesheets;</li>
+                        <li>UIs (User Interfaces);</li>
+                        <li>A* (A Star) pathfinding in Java;</li>
+                        <li>Simple enemies' AI;</li>
+                        <li>Simple cutscene systems;</li>
+                        <li>Simple stages/levels changing system.</li>
+                    </ul>
+
+                    <p><strong>Using Java and this simple game engine, I've made the following study projects:</strong></p>
+                    <ul>
+                        <li>Platformer (Mario-like) gameplay;</li>
+                        <li>Zelda-like gameplay;</li>
+                        <li>Top down shooter gameplay with simple enemies that follows the player, bullets, ammo and collectables;</li>
+                        <li>Flappy Bird gameplay with physics, collisions and obstacles spawning;</li>
+                        <li>2D Minecraft gameplay with simplified procedural world generation, blocks construction, blocks destruction and collection, inventory and crafting system.</li>
+                    </ul>
+
+                    <div class="media-grid">
+                        <img src="images/OtherTechnologies/Game3/Screenshot1.png" alt="Screenshot 1">
+                        <img src="images/OtherTechnologies/Game3/Screenshot2.png" alt="Screenshot 2">
+                        <img src="images/OtherTechnologies/Game3/Screenshot3.png" alt="Screenshot 3">
+                        <img src="images/OtherTechnologies/Game3/Screenshot4.png" alt="Screenshot 4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="text-orange">Pixel Art Gallery</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt1.gif')">
+                    <img src="images/PixelArts/PixelArt1.gif" alt="Pixel Art 1" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt2.gif')">
+                    <img src="images/PixelArts/PixelArt2.gif" alt="Pixel Art 2" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt3.gif')">
+                    <img src="images/PixelArts/PixelArt3.gif" alt="Pixel Art 3" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt4.gif')">
+                    <img src="images/PixelArts/PixelArt4.gif" alt="Pixel Art 4" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt5.png')">
+                    <img src="images/PixelArts/PixelArt5.png" alt="Pixel Art 5" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt6.png')">
+                    <img src="images/PixelArts/PixelArt6.png" alt="Pixel Art 6" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt7.gif')">
+                    <img src="images/PixelArts/PixelArt7.gif" alt="Pixel Art 7" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt8.gif')">
+                    <img src="images/PixelArts/PixelArt8.gif" alt="Pixel Art 8" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt9.png')">
+                    <img src="images/PixelArts/PixelArt9.png" alt="Pixel Art 9" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt10.gif')">
+                    <img src="images/PixelArts/PixelArt10.gif" alt="Pixel Art 10" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt11.png')">
+                    <img src="images/PixelArts/PixelArt11.png" alt="Pixel Art 11" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt12.gif')">
+                    <img src="images/PixelArts/PixelArt12.gif" alt="Pixel Art 12" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt13.png')">
+                    <img src="images/PixelArts/PixelArt13.png" alt="Pixel Art 13" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt14.gif')">
+                    <img src="images/PixelArts/PixelArt14.gif" alt="Pixel Art 14" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt15.gif')">
+                    <img src="images/PixelArts/PixelArt15.gif" alt="Pixel Art 15" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt16.gif')">
+                    <img src="images/PixelArts/PixelArt16.gif" alt="Pixel Art 16" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt17.gif')">
+                    <img src="images/PixelArts/PixelArt17.gif" alt="Pixel Art 17" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt18.gif')">
+                    <img src="images/PixelArts/PixelArt18.gif" alt="Pixel Art 18" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt19.gif')">
+                    <img src="images/PixelArts/PixelArt19.gif" alt="Pixel Art 19" class="gallery-img">
+                </div>
+                <div class="gallery-item" onclick="openModal('images/PixelArts/PixelArt20.gif')">
+                    <img src="images/PixelArts/PixelArt20.gif" alt="Pixel Art 20" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="text-purple">Game Jams</h2>
+            
+            <a href="https://rerezin-das-galaxias.itch.io/arraial-de-toninho-e-tinho" target="_blank" class="jam-card">
+                <div class="card-header">
+                    <img src="images/GameJams/Game1/Thumbnail.jpg" alt="Arraial do Toninho e Tinho">
+                    <div class="card-title-area">
+                        <h3>Arraial do Toninho e Tinho</h3>
+                        <p class="role"><i class="fa-solid fa-medal" style="color: #ffd700;"></i> 1st Place - Senac Game Jam 2024</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://rerezin-das-galaxias.itch.io/eco-green" target="_blank" class="jam-card">
+                <div class="card-header">
+                    <img src="images/GameJams/Game2/Thumbnail.jpg" alt="Eco Farm Green">
+                    <div class="card-title-area">
+                        <h3>Eco Farm Green</h3>
+                        <p class="role"><i class="fa-solid fa-medal" style="color: #ffd700;"></i> 1st Place - 1st HUG Game Jam (2024)</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://rerezin-das-galaxias.itch.io/type-defender" target="_blank" class="jam-card">
+                <div class="card-header">
+                    <img src="images/GameJams/Game3/Thumbnail.jpg" alt="Type Defender">
+                    <div class="card-title-area">
+                        <h3>Type Defender</h3>
+                        <p class="role"><i class="fa-solid fa-medal" style="color: #ffd700;"></i> 1st Place - BGS Game Jam 2022</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://rerezin-das-galaxias.itch.io/cyber-defender" target="_blank" class="jam-card">
+                <div class="card-header">
+                    <img src="images/GameJams/Game4/Thumbnail.jpg" alt="Cyber Defender">
+                    <div class="card-title-area">
+                        <h3>Cyber Defender</h3>
+                        <p class="role"><i class="fa-solid fa-medal" style="color: #c0c0c0;"></i> 2nd Place - 9th CSJam</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <section class="section">
+            <h2 class="text-blue">Lectures & Interviews</h2>
+            
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/LecturesAndMedia/Media1/Thumbnail.jpg" alt="BGS Talks 2025 Thumbnail">
+                    <div class="card-title-area">
+                        <h3>BGS Talks 2025</h3>
+                        <p class="role">Speaker</p>
+                        <ul>
+                            <li>"Challenges for digital games education: integrating the market and the university"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Event:</strong> Brazil Game Show (BGS) Talks | <strong>Type:</strong> Lecture</p>
+                    
+                    <p><strong>Description:</strong> Presentation about university education in digital games and its connection to the games job market.</p>
+                    
+                    <div class="media-grid">
+                        <img src="images/LecturesAndMedia/Media1/Screenshot1.png" alt="BGS Photo 1">
+                        <img src="images/LecturesAndMedia/Media1/Screenshot2.png" alt="BGS Photo 2">
+                        <img src="images/LecturesAndMedia/Media1/Screenshot3.png" alt="BGS Photo 3">
+                        <img src="images/LecturesAndMedia/Media1/Screenshot4.png" alt="BGS Photo 4">
+                    </div>
+                    
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/IGVWVq8cJPI?start=3737" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/LecturesAndMedia/Media2/Thumbnail.jpg" alt="Campus Party 2023 Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Campus Party 2023</h3>
+                        <p class="role">Speaker</p>
+                        <ul>
+                            <li>"Game industry: from dream to reality"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Event:</strong> Campus Party 2023 | <strong>Type:</strong> Lecture</p>
+                    
+                    <p><strong>Description:</strong> Presentation on the gaming market, with tips and insights on how to start developing your own games and launch a gaming career.</p>
+                    
+                    <div class="media-grid">
+                        <img src="images/LecturesAndMedia/Media2/Screenshot1.png" alt="Campus Party Photo 1">
+                        <img src="images/LecturesAndMedia/Media2/Screenshot2.png" alt="Campus Party Photo 2">
+                        <img src="images/LecturesAndMedia/Media2/Screenshot3.png" alt="Campus Party Photo 3">
+                        <img src="images/LecturesAndMedia/Media2/Screenshot4.png" alt="Campus Party Photo 4">
+                    </div>
+                    
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/gDA_8l9h4Gk" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onclick="toggleCard(this)">
+                <div class="card-header">
+                    <img src="images/LecturesAndMedia/Media3/Thumbnail.jpg" alt="Drop de Jogos Interview Thumbnail">
+                    <div class="card-title-area">
+                        <h3>Drop de Jogos Interview</h3>
+                        <p class="role">Interviewee / 1st Place HUG Game Jam</p>
+                        <ul>
+                            <li>"Exclusive: Drop de Jogos interviews winners from the 1st HUG Game Jam"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <p><strong>Platform:</strong> Drop de Jogos | <strong>Type:</strong> Media Interview</p>
+                    
+                    <p><strong>Description:</strong> An exclusive interview detailing our team's victory at the 1st HUG (University Students Game Hub) Game Jam, discussing our creative process and development pipeline during the event.</p>
+                    
+                    <div class="trailer-container">
+                        <iframe src="https://www.youtube.com/embed/fZ9INkv2pEI?start=227" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="about-container">
+                <img src="images/RenanPicture.jpeg" alt="Renan Nunes" class="about-pic">
+                <div class="about-info">
+                    <h2 class="text-purple">About Me</h2>
+                    <p>I'm Renan Nunes da Silva, a game Programmer, game designer and indie game developer with generalist knowledge in the game development area, having expertise, aside from programming, in game design, technical art, 2D art, animation, UI/UX, and project management.</p>
+                    
+                    <div class="skills-grid">
+                        <div>
+                            <h4 class="text-blue">Hard Skills</h4>
+                            <ul>
+                                <li>Unity (C#), Unreal Engine 5 (C++, Blueprint)</li>
+                                <li>OOP, Code Architecture, Data Structures</li>
+                                <li>Databases with SQL, Java and JavaScript</li>
+                                <li>Game Design, Tech Art, 2D Art & Animation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-orange">Soft Skills</h4>
+                            <ul>
+                                <li>Communication & Leadership</li>
+                                <li>Project Management (Scrum)</li>
+                                <li>Cross-department Collaboration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skills-grid">
+                        <div>
+                            <h4 class="text-blue">Favorite Game Genres</h4>
+                            <ul>
+                                <li>Action-Adventure</li>
+                                <li>Platformers</li>
+                                <li>Role-Playing Games (RPGs)</li>
+                                <li>Strategy</li>
+                                <li>Hack n' Slash</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-orange">Favorite Games</h4>
+                            <ul>
+                                <li>Cross Code</li>
+                                <li>Unsighted</li>
+                                <li>Megaman X4 (and all the series)</li>
+                                <li>Megaman Zero 3 (and all the series)</li>
+                                <li>Final Fantasy IX</li>
+                                <li>Final Fantasy Tactics</li>
+                                <li>Sonic Unleashed</li>
+                                <li>Super Smash Bros Ultimate</li>
+                                <li>One Step from Eden</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p class="contact-info">
+                        <strong>Contact:</strong> renannunesgamedev@gmail.com | +55 (11) 975234293
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="resume-container">
+                <h2 class="text-blue">Resume & Summary</h2>
+                <p>
+                    Game programmer and Game Designer focused on Unity (C#) and Unreal Engine 5 (C++ and Blueprint), with a degree as Bachelor in Digital Games by Senac and IT Technician by ETESP, having over 2 years’ experience in game companies, indie game development, freelance, and game jams.
+                </p>
+                <a href="https://docs.google.com/document/d/1Et1nSmL0ogXqAFK4lsX_m3jBSydUsmlPW1_41JbVMq8/edit?usp=sharing" class="btn-download" target="_blank">
+                    <i class="fa-solid fa-file-pdf"></i> Access Full Resume
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
