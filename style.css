@@ -1,10 +1,30 @@
-/* CSS Variables for Triad Palette */
+/* CSS Variables for Triad Palette & Theming */
 :root {
     --blue: #3498db;
     --purple: #9b59b6;
     --orange: #e67e22;
+    
+    /* Light Theme Basics */
     --bg-color: #f8f9fa;
     --text-color: #2c3e50;
+    --card-bg: #ffffff;
+    --card-details-bg: #fafafa;
+    --border-color: #eaeaea;
+    --ul-text-color: #555555;
+    --dot-pattern-color: #d1d8e0;
+    --nav-tooltip-text-color: #f8f9fa;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f8f9fa;
+    --card-bg: #1e1e1e;
+    --card-details-bg: #2a2a2a;
+    --border-color: #444444;
+    --ul-text-color: #cccccc;
+    --dot-pattern-color: #333333;
+    --nav-tooltip-text-color: #333333;
 }
 
 body, html {
@@ -14,15 +34,43 @@ body, html {
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow: visible; /* Hide scrollbars for the main body */
-    /* Clean textured background effect */
-    background-image: radial-gradient(#d1d8e0 1px, transparent 1px);
+    /* Clean textured background effect mapped to variables */
+    background-image: radial-gradient(var(--dot-pattern-color) 1px, transparent 1px);
     background-size: 20px 20px;
+    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth fade on toggle */
 }
 
 /* Helper Text Classes */
 .text-blue { color: var(--blue); }
 .text-purple { color: var(--purple); }
 .text-orange { color: var(--orange); }
+
+/* --- Dark Mode Toggle Button --- */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--text-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.4s ease, color 0.4s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.15) translateY(-5px);
+    color: var(--orange);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
 
 /* --- Top Navigation / Carousel Buttons --- */
 .navbar {
@@ -33,10 +81,11 @@ body, html {
     display: flex;
     gap: 20px;
     z-index: 1000;
-    background: white;
+    background: var(--card-bg);
     padding: 10px 20px;
     border-radius: 50px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: background-color 0.4s ease;
 }
 
 .nav-btn {
@@ -67,6 +116,8 @@ body, html {
 .nav-btn:nth-child(5) { background-color: var(--purple); }
 .nav-btn:nth-child(6) { background-color: var(--orange); }
 .nav-btn:nth-child(7) { background-color: var(--blue); }
+.nav-btn:nth-child(8) { background-color: var(--purple); }
+.nav-btn:nth-child(9) { background-color: var(--orange); }
 
 .nav-btn:hover {
     transform: scale(1.15) translateY(-5px);
@@ -80,7 +131,7 @@ body, html {
     left: 50%;
     transform: translateX(-50%);
     background: var(--text-color);
-    color: white;
+    color: var(--nav-tooltip-text-color);
     padding: 5px 12px;
     border-radius: 12px;
     font-size: 14px;
@@ -97,17 +148,14 @@ body, html {
 /* --- Carousel Container --- */
 .carousel {
     display: flex;
-    width: 900vw; /* Updated to 800vw */
+    width: 900vw; 
     height: 100vh;
     transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-/* --- Add 8th and 9th button color (cycling back to purple) --- */
-.nav-btn:nth-child(8) { background-color: var(--purple); }
-.nav-btn:nth-child(9) { background-color: var(--orange); }
-
+/* --- Game Jam Link Cards --- */
 .jam-card {
-    background: white;
+    background: var(--card-bg);
     width: 200%;
     max-width: 1000px;
     border-radius: 20px;
@@ -116,7 +164,7 @@ body, html {
     display: block; /* Allows a tag to act as a block */
     text-decoration: none; /* Removes hyperlink underline */
     border-left: 8px solid var(--orange);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.4s ease;
 }
 
 .jam-card:nth-child(even) { border-left-color: var(--purple); }
@@ -151,7 +199,8 @@ body, html {
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border: 4px solid white;
+    border: 4px solid var(--card-bg);
+    transition: border-color 0.4s ease;
 }
 
 .gallery-img {
@@ -264,7 +313,7 @@ h2 { font-size: 2rem; color: var(--orange); margin-top: 0; }
 
 /* --- Project Cards --- */
 .card {
-    background: white;
+    background: var(--card-bg);
     width: 200%;
     max-width: 1000px;
     border-radius: 20px;
@@ -273,7 +322,7 @@ h2 { font-size: 2rem; color: var(--orange); margin-top: 0; }
     cursor: pointer;
     overflow: hidden;
     border-left: 8px solid var(--blue);
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.4s ease;
 }
 .card:hover { transform: translateX(5px); }
 .card:nth-child(even) { border-left-color: var(--orange); }
@@ -293,21 +342,21 @@ h2 { font-size: 2rem; color: var(--orange); margin-top: 0; }
 .card-title-area h3 { margin: 0 0 5px 0; color: var(--text-color); font-size: 1.5rem;}
 .card-title-area p.role { color: var(--purple); font-weight: bold; margin: 0 0 10px 0; }
 .card-title-area p.date { color: var(--blue); font-weight: bold; margin: 0 0 10px 0; }
-.card-title-area ul { margin: 0; padding-left: 20px; font-size: 0.95rem; color: #555; }
+.card-title-area ul { margin: 0; padding-left: 20px; font-size: 0.95rem; color: var(--ul-text-color); }
 
 /* Dropdown content */
 .card-details {
     max-height: 0;
     padding: 0 20px;
-    background: #fafafa;
+    background: var(--card-details-bg);
     overflow: hidden; /* Keeps scrollbar hidden while collapsed */
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, background-color 0.4s ease;
 }
 
 .card.expanded .card-details {
     max-height: 80vh; /* Restricts the expanded height to 50% of the screen */
     padding: 20px;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--border-color);
     overflow-y: auto; /* Enables vertical scrolling inside the card */
 }
 
@@ -317,7 +366,7 @@ h2 { font-size: 2rem; color: var(--orange); margin-top: 0; }
 }
 
 .card-details::-webkit-scrollbar-track {
-    background: #f8f9fa;
+    background: var(--bg-color);
     border-radius: 10px;
 }
 
@@ -344,12 +393,13 @@ h2 { font-size: 2rem; color: var(--orange); margin-top: 0; }
 .about-container {
     display: flex;
     gap: 40px;
-    background: white;
+    background: var(--card-bg);
     padding: 40px;
     border-radius: 25px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     max-width: 1500px;
     align-items: flex-start;
+    transition: background-color 0.4s ease;
 }
 .about-pic {
     width: 240px;
@@ -370,10 +420,11 @@ h2 { font-size: 2rem; color: var(--orange); margin-top: 0; }
 .resume-container {
     text-align: center;
     max-width: 800px;
-    background: white;
+    background: var(--card-bg);
     padding: 40px;
     border-radius: 25px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: background-color 0.4s ease;
 }
 .resume-container p {
     font-size: 1.1rem;
