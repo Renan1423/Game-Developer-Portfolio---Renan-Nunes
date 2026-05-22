@@ -33,7 +33,8 @@ body, html {
     font-family: 'Varela Round', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    overflow: visible; /* Hide scrollbars for the main body */
+    overflow-x: hidden; /* Hide scrollbars for the main body */
+    overflow-y: visible; /* Prevent vertical scrolling on the body */
     /* Clean textured background effect mapped to variables */
     background-image: radial-gradient(var(--dot-pattern-color) 1px, transparent 1px);
     background-size: 20px 20px;
